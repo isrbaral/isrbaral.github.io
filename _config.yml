@@ -57,7 +57,7 @@ plugins:
 author:
   name   : "Israel Baral"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "Hi I'm a ServiceNow Developer with a passion for great UX."
+  bio    : "Hi I'm a ServiceNow Developer with a passion for great UX. I use this site to keep a record of things I want to remember that might be useful to others."
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
