@@ -40,7 +40,9 @@ This bookmarklet checks if you're on a ServiceNow instance and then appends the 
 
 ## Solution 2: Custom Query Part Switches
 
-Another approach uses ServiceNow's custom query part switches, a feature some users weren't even aware existed:
+Another approach uses ServiceNow's custom query part switches, a feature some users weren't even aware existed:  
+Open the extension from your toolbar, scroll down and click here on the settings tab
+![screenshot of where to find the switch editor in sn-utils](/assets/images/slashcommand_rows2.png)
 
 ```json
 {
@@ -68,6 +70,8 @@ javascript: void(function(){
 ```
 
 This command allows for the input of any custom number. For example, typing `/frc 317` would force the row count to display 317 records. For convenience, they also created switches for common values like `-r200` and `-r1000`.
+
+![screenshot of the slashcommand in sn-utils](/assets/images/slashcommand_rows.png)
 
 ## Refinements and Best Practices
 
