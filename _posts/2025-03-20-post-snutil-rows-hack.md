@@ -10,7 +10,12 @@ tags:
   - ai-generated
 ---
 
-# ServiceNow Row Count Hacks: Tips from the Community
+>### Attribution
+>[DISCLAIMER] This is an AI-generated blog post based on a Slack conversation. I've created this to preserve and share the valuable knowledge discussed, here are those who contributed:  
+>@nick.c-137  
+>@wiz0floyd  
+>@arnoudkooi  
+>Here's a link to the original discussion (might be dead): [Slack Discussion](https://sndevs.slack.com/archives/CKB5Q8DNK/p1742489712036399?thread_ts=1742405573.778519&cid=CKB5Q8DNK)
 
 ## The Problem: Displaying More Records on a Single Page
 
@@ -82,13 +87,4 @@ Whether you prefer bookmarklets, custom query parts, or slash commands, these ap
 
 ---
 
-## Attribution
-[DISCLAIMER] This is an AI-generated blog post based on a Slack conversation. I've created this to preserve and share the valuable knowledge discussed, here are those who contributed:
 
-@nick.c-137
-
-@wiz0floyd
-
-@arnoudkooi
-
-Here's a link to the original discussion (might be dead): [Slack Discussion](https://sndevs.slack.com/archives/CKB5Q8DNK/p1742489712036399?thread_ts=1742405573.778519&cid=CKB5Q8DNK)
