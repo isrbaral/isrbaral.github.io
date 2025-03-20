@@ -85,6 +85,88 @@ This conversation demonstrates the power of community knowledge sharing in solvi
 
 Whether you prefer bookmarklets, custom query parts, or slash commands, these approaches provide convenient ways to view more records at once in ServiceNow—proving that sometimes the most helpful tools are the ones that solve small but persistent frustrations in our daily workflows.
 
----
 
+<!-- For various reasons I occasionally have the need to add sysparm_force_row_count=NUMBER to the URL to display like 2 or 300 records in a list all on one page. The problem is, I always forget the name of that parameter for some reason lol.Something like this should be doable in a slash command using JS yeah? Just parse the URL and find a spot to add the new parameter. It seems pretty simple but wanted to make sure I wasn’t underthinking it before I decided to throw something together. Thanks!
+27 replies
+:coffee_parrot:  Yesterday at 12:36 PM
+I've got it in a bookmarklet
+12:36
+Slash command could work easily enough too
+  Yesterday at 12:37 PM
+Sheeiiittt
+If you don’t mind sharing it, might get me started quickly? Haha
+:coffee_parrot:  Yesterday at 12:37 PM
+Yeah. Out of pocket, will try to remember when I'm at my desk
+  Yesterday at 12:37 PM
+All good man, no rush at all
+12:37
+Appreciate you
+:coffee_parrot:  Yesterday at 12:38 PM
+Actually might have it synced to my phone
+12:38
 
+javascript: void(function(){ var loc = String(top.location);%20 if (loc.indexOf('service-now.com') > -1 || loc.indexOf('servicenowservices.com') > -1) { top.location += '&sysparm_userpref_rowcount=' + Number(%s);}})()
+
+  Yesterday at 12:38 PM
+Hah, I’m stuck in a couple meetings anyway, don’t go to any extra trouble for me, won’t be able to do anything with it yet anyway
+:coffee_parrot:  Yesterday at 12:38 PM
+I have it saved as a custom search engine
+  Yesterday at 12:39 PM
+Ignore what I said you’re the best lol
+@wiz0floyd
+++
+APP  Yesterday at 12:39 PM
+Good going
+@wiz0floyd
+you now have 77 points (2618 total) :second_place_medal:
+  Yesterday at 12:54 PM
+A custom querypart switch should work
+  Yesterday at 12:56 PM
+I was unaware we could even make our own switches? Lol
+  Yesterday at 1:00 PM
+
+{
+    "r200": {
+        "description": "200 rows",
+        "value": "&sysparm_userpref_rowcount=200",
+        "type": "querypart"
+    }
+}
+
+1:02
+You can apply it to current list, or in any slash command. It doesnt support variables at this point
+This file was deleted.
+1:05
+CleanShot 2025-03-19 at 19.04.53@2x.png 
+CleanShot 2025-03-19 at 19.04.53@2x.png
+  Yesterday at 1:05 PM
+Well shit, this is super simple. Thanks guys!
+!pp
+APP  Yesterday at 1:05 PM
+Way to help out
+@wiz0floyd
+you now have 78 points (2619 total) :second_place_medal:
+Good going
+@arnoudkooi
+you now have 8 points (550 total) :sparkles:
+  Yesterday at 1:13 PM
+So I made /frc $0 to take custom input then made a switch for -r200 and -r1000That should pretty much cover any use case I’d ever have. This ended up being way simpler than I thought. You guys are the greatest
+  Yesterday at 1:18 PM
+whats the /frc $0 do?
+  Yesterday at 1:32 PM
+It’s mostly just wiz’s script to allow me to put in a custom number for the force_row_count param.Specifically this:
+
+javascript: void(function(){ var loc = String(top.location);%20 if (loc.indexOf('service-now.com') > -1 || loc.indexOf('servicenowservices.com') > -1) { top.location += '&sysparm_force_row_count=$0';}})()
+
+(edited)
+1:32
+So like /frc 317 will force the row count on the page to 317 (edited) 
+:coffee_parrot:  Yesterday at 1:50 PM
+You can probably drop all of the checking if it's a servicenow instance if you're using it in a slash command. I needed that when I was on a locked down computer and couldn't add plugins to my browser.
+  Yesterday at 2:33 PM
+Hah, I think I’m going to swap it out a bit and check if the parameter is already in the URL and replace it if so.
+Because right now it just adds to the end and if I try to change it on a URL that already has the parameter it won’t work.Also that situation probably almost never happens so I’m not sure if I care haha
+:coffee_parrot:  Yesterday at 2:42 PM
+Could happen if you use it twice in a row
+  Yesterday at 6:48 PM
+This is excellent.   I would use this so much -->
