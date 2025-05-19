@@ -1,3 +1,19 @@
+---
+title: "SP Date Picker Docs"
+date: 2025-05-19T12:10:04-05:00
+categories:
+  - blog
+tags:
+  - servicenow
+  - service portal
+  - angularJS
+  - directive
+  - datepicker
+  - ai-generated
+---
+>### Attribution
+>[DISCLAIMER] This is an AI-generated blog post based on importing scripts/app.$sp/directive.spDatePicker.js into claude and asking it to generate a document explaining how to use it.
+
 # ServiceNow spDatePicker Directive Documentation
 
 ## Overview
