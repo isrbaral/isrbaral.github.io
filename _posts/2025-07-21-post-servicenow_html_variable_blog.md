@@ -1,6 +1,9 @@
 ---
 title: "Creating Dynamic UI Elements with HTML Variables in ServiceNow Catalog Items"
 date: 2025-07-21T10:07:04-05:00
+header: 
+  teaser: /assets/images/html_variable.png
+  og_image: /assets/images/html_variable.png
 categories:
   - blog
 tags:
